@@ -191,9 +191,9 @@ class Config(metaclass=Singleton):
 
     def get_prefix(self, role):
         roles = {
-            'frontend': 'kobofe',
-            'backend': 'kobobe',
-            'maintenance': 'kobomaintenance'
+            'frontend': 'gisc_kobofe',
+            'backend': 'gisc_kobobe',
+            'maintenance': 'gisc_kobomaintenance'
         }
 
         try:
