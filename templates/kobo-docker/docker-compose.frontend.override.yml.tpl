@@ -27,7 +27,7 @@ services:
     ${ADD_BACKEND_EXTRA_HOSTS}  - redis-main.${PRIVATE_DOMAIN_NAME}:${PRIMARY_BACKEND_IP}
     ${ADD_BACKEND_EXTRA_HOSTS}  - redis-cache.${PRIVATE_DOMAIN_NAME}:${PRIMARY_BACKEND_IP}
     ${USE_BACKEND_NETWORK}networks:
-    ${USE_BACKEND_NETWORK}  kobo-be-network:
+    ${USE_BACKEND_NETWORK}  kobo-gisc-be-network:
     ${USE_BACKEND_NETWORK}    aliases:
     ${USE_BACKEND_NETWORK}      - kobocat
     ${USE_BACKEND_NETWORK}      - kobocat.docker.container
@@ -58,7 +58,7 @@ services:
     ${ADD_BACKEND_EXTRA_HOSTS}  - redis-main.${PRIVATE_DOMAIN_NAME}:${PRIMARY_BACKEND_IP}
     ${ADD_BACKEND_EXTRA_HOSTS}  - redis-cache.${PRIVATE_DOMAIN_NAME}:${PRIMARY_BACKEND_IP}
     ${USE_BACKEND_NETWORK}networks:
-    ${USE_BACKEND_NETWORK}  kobo-be-network:
+    ${USE_BACKEND_NETWORK}  kobo-gisc-be-network:
     ${USE_BACKEND_NETWORK}    aliases:
     ${USE_BACKEND_NETWORK}      - kpi
     ${USE_BACKEND_NETWORK}      - kpi.docker.container
@@ -78,7 +78,7 @@ services:
     ${ADD_BACKEND_EXTRA_HOSTS}  - redis-main.${PRIVATE_DOMAIN_NAME}:${PRIMARY_BACKEND_IP}
     ${ADD_BACKEND_EXTRA_HOSTS}  - redis-cache.${PRIVATE_DOMAIN_NAME}:${PRIMARY_BACKEND_IP}
     networks:
-      kobo-fe-network:
+      kobo-gisc-fe-network:
         aliases:
           - ${KOBOFORM_SUBDOMAIN}.${INTERNAL_DOMAIN_NAME}
           - ${KOBOCAT_SUBDOMAIN}.${INTERNAL_DOMAIN_NAME}
@@ -99,10 +99,10 @@ services:
     ${ADD_BACKEND_EXTRA_HOSTS}  - redis-main.${PRIVATE_DOMAIN_NAME}:${PRIMARY_BACKEND_IP}
     ${ADD_BACKEND_EXTRA_HOSTS}  - redis-cache.${PRIVATE_DOMAIN_NAME}:${PRIMARY_BACKEND_IP}
     ${USE_BACKEND_NETWORK}networks:
-    ${USE_BACKEND_NETWORK}  kobo-be-network:
+    ${USE_BACKEND_NETWORK}  kobo-gisc-be-network:
     ${USE_BACKEND_NETWORK}    aliases:
     ${USE_BACKEND_NETWORK}      - enketo_express
 
 ${USE_BACKEND_NETWORK}networks:
-${USE_BACKEND_NETWORK}  kobo-be-network:
-${USE_BACKEND_NETWORK}    name: ${DOCKER_NETWORK_BACKEND_PREFIX}_kobo-be-network
+${USE_BACKEND_NETWORK}  kobo-gisc-be-network:
+${USE_BACKEND_NETWORK}    name: ${DOCKER_NETWORK_BACKEND_PREFIX}_kobo-gisc-be-network

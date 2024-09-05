@@ -12,11 +12,11 @@ services:
     ${USE_LETSENSCRYPT}ports:
     ${USE_LETSENSCRYPT}  - ${NGINX_EXPOSED_PORT}:80
     networks:
-      kobo-fe-network:
+      kobo-gisc-fe-network:
         aliases:
           - nginx
           - nginx.internal
 
 networks:
-  kobo-fe-network:
-    name: ${DOCKER_NETWORK_FRONTEND_PREFIX}_kobo-fe-network
+  kobo-gisc-fe-network:
+    name: ${DOCKER_NETWORK_FRONTEND_PREFIX}_kobo-gisc-fe-network

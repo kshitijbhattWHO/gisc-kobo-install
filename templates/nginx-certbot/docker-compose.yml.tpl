@@ -13,7 +13,7 @@ services:
       - "443:443"
     command: "/bin/sh -c 'while :; do sleep 6h & wait $$$${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
     networks:
-      kobo-fe-network:
+      kobo-gisc-fe-network:
         aliases:
           - nginx_ssl_proxy
   certbot:
@@ -25,5 +25,5 @@ services:
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $$$${!}; done;'"
 
 networks:
-  kobo-fe-network:
-    name: ${DOCKER_NETWORK_FRONTEND_PREFIX}_kobo-fe-network
+  kobo-gisc-fe-network:
+    name: ${DOCKER_NETWORK_FRONTEND_PREFIX}_kobo-gisc-fe-network
